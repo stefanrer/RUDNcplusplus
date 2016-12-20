@@ -3,8 +3,6 @@
 #define PI 3.14159265
 using namespace std;
 
-//Настроить периуд у Син и Кос надо!!!
-
 float halfIntervalMethod(float (*fName)(float), float a, float b, float accLevel)
 {
     float c, aVal, bVal, accVal;
@@ -50,7 +48,8 @@ float searchZero(float (*fPointer)(float), float negPoint, float posPoint, float
     if(closeEnought(negPoint, posPoint, accL)){
         return midPoint;
     }
-// здесь работает указатель на функцию
+
+// the function pointer works here
     testValue = fPointer(midPoint);
     cout << "Step " << counter << ": negPoint = " << negPoint << ", posPoint = " << posPoint << ", midPoint = " << midPoint << "\n";
     counter++;
